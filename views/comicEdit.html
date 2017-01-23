@@ -1,0 +1,25 @@
+<div class="header">
+    <div class="logo">
+      <a href="#">Tienda de Comics</a>
+    </div>
+      <ul class="navbar">
+        <li><a href="#!/signup">Crear empleados</a></li>
+        <li><a href="#!/login" ng-click="vm.logout()">Cerrar sesión</a></li>
+      </ul>
+  </div>
+  <div class="container">
+    <form name="form" role="form" ng-submit="vm.editComic(vm.comic)">
+      <div class="form-input">
+      <input type="text" name="name" placeholder="Nombre del comic"  ng-model="vm.comic.name" required>
+      </div>
+      <div class="form-input">
+      <input type="text" name="year" placeholder="Año"  ng-model="vm.comic.year" required>
+      </div>
+      <div class="form-input">
+      <input type="text" name="author" placeholder="Autor"  ng-model="vm.comic.author" required>
+      </div>
+      <textarea type="text" name="resume" placeholder="Resumen"  ng-model="vm.comic.resume" required></textarea>
+      <br>
+      <button class="btn-login" type="submit">Agregar</button>
+    </form>
+  </div>

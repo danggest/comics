@@ -1,0 +1,21 @@
+<div class="header">
+    <div class="logo">
+      <a href="#">Tienda de Comics</a>
+    </div>
+      <ul class="navbar">
+        <li><a href="#!/signup">Crear empleados</a></li>
+        <li><a href="#!/login" ng-click="vm.logout()">Cerrar sesión</a></li>
+      </ul>
+  </div>
+  <div class="container">
+    <div class="section">
+      <div class="img">
+        <img src="../img/superheroes-comic-book.png" alt="">
+      </div>
+      <div class="content">
+        <h1>{{ vm.comic.name}} - {{vm.comic.author}} - {{vm.comic.year}}</h1>
+        <p>{{ vm.comic.resume }}</p>
+        <a href="#!/edit/{{vm.comic.id}}">Editar</a>
+      </div>
+    </div>
+  </div>

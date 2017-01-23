@@ -1,0 +1,28 @@
+<div class="header">
+  <div class="logo">
+    <a href="#">Tienda de Comics</a>
+  </div>
+    <ul class="navbar">
+      <li><a href="#!/signup">Crear empleados</a></li>
+      <li><a href="#!/login" ng-click="vm.logout()">Cerrar sesión</a></li>
+    </ul>
+</div>
+<div class="container-form">
+  <img src="../img/scream-bubble.png" alt="">
+  <form name="form" role="form" ng-submit="register.loadData()">
+    <div class="form-input">
+    <input type="text" name="name" placeholder="Nombre"  ng-model="register.user.name" required>
+    </div>
+    <div class="form-input">
+    <input type="text" name="lastName" placeholder="Apellido"  ng-model="register.user.lastName" required>
+    </div>
+    <div class="form-input">
+    <input type="text" name="username" placeholder="Nombre de usuario"  ng-model="register.user.username" required>
+    </div>
+    <div class="form-input">
+      <input type="password" name="password" placeholder="Contraseña"  ng-model="register.user.password" required ng-pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,}/">
+      <span class="span" ng-show="form.password.$error.pattern">Contraseña es muy debil</span>
+    </div>
+    <button class="btn-login" type="submit">Registrarme</button>
+  </form>
+</div>

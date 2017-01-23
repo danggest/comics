@@ -1,0 +1,20 @@
+<div class="header">
+    <div class="logo">
+      <a href="#">Tienda de Comics</a>
+    </div>
+      <ul class="navbar">
+        <li><a href="#!/login">Ingresar</a></li>
+      </ul>
+  </div>
+  <div class="container-form">
+    <img src="../img/superhero.png" alt="">
+    <form name="form" ng-submit="login.login()" role="form">
+      <div class="form-input">
+        <input type="text" name="username" placeholder="Nombre de usuario" required="" ng-model="login.user.username">
+      </div>
+      <div class="">
+        <input type="password" name="password" placeholder="Contraseña" required="" ng-model="login.user.password">
+      </div>
+      <button type="submit" class="btn-login">Ingresar</button>
+    </form>
+  </div>
